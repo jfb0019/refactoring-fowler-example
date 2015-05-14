@@ -57,5 +57,6 @@ public class Rental {
 			frequentRenterPoints++;
 		return frequentRenterPoints;
 	}
+	
 
 }
