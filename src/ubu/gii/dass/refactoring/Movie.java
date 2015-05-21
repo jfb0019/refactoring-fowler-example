@@ -17,7 +17,6 @@ public class Movie {
 	public static final int NEW_RELEASE = 1;
 
 	private String _title;
-	private int _priceCode;
 	private MovieType movieType;
 
 	public Movie(String title, int priceCode) {
@@ -26,11 +25,23 @@ public class Movie {
 	}
 
 	public int getPriceCode() {
-		return _priceCode;
+		return movieType.getType();
 	}
 
 	public void setPriceCode(int arg) {
-		_priceCode = arg;
+		switch(arg){
+		case CHILDRENS:
+			movieType = new Childrens();
+			break;
+		case REGULAR:
+			movieType = new Regular();
+			break;
+		case NEW_RELEASE:
+			movieType = new NewRelease();
+			break;
+		default:
+			throw new IllegalArgumentException("Incorrect Movie Code");
+		}
 	}
 
 	public String getTitle() {
