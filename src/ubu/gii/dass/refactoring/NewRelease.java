@@ -4,7 +4,7 @@ public class NewRelease extends MovieType {
 
 	@Override
 	public int getType() {
-		return Movie.NEW_RELEASE;
+		return MovieType.NEW_RELEASE;
 	}
 
 }
