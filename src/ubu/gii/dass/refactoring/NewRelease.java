@@ -2,4 +2,9 @@ package ubu.gii.dass.refactoring;
 
 public class NewRelease extends MovieType {
 
+	@Override
+	public int getType() {
+		return Movie.NEW_RELEASE;
+	}
+
 }
